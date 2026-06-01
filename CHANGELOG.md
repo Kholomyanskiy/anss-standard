@@ -2,6 +2,17 @@
 
 All notable changes to ANSS Standard will be documented in this file.
 
+## [1.3.2] — 2026-06-02
+
+### Added
+- `examples/` folder with two real-world filled specifications
+- Example: Solo Founder OS (local Node.js web app with AI agent team)
+- Example: LombardPro (multi-branch pawnshop SaaS)
+
+### Improved
+- README.md: shorter, added ASCII visuals for layers, workflow, and levels
+- README.ru.md: Russian version brought to the same structure
+
 ## [1.3] — 2026-06
 
 ### Added
