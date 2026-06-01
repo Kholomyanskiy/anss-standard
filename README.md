@@ -173,7 +173,7 @@ This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareA
 - Sell or include in commercial products without a separate license
 - Remove author attribution
 
-**Commercial license:** contact [your email]
+**Commercial license:** contact kholomyanskiy@gmail.com
 
 ---
 
@@ -183,9 +183,8 @@ This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareA
 
 Specializes in AI-First methodology, specification-driven development, and building autonomous AI agent systems.
 
-- LinkedIn: [link]
-- GitHub: [link]
-- Book: "AI-First Specifications" (2026)
+- LinkedIn: [linkedin.com/in/kholomyanskiy](https://linkedin.com/in/kholomyanskiy)
+- GitHub: [github.com/Kholomyanskiy](https://github.com/Kholomyanskiy)
 
 ---
 
