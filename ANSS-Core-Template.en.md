@@ -35,7 +35,7 @@
 | Version | 0.1 Draft |
 | Date | [YYYY-MM-DD] |
 | Status | Draft |
-| Author | Artem Khalomyansky |
+| Author | Artem Kholomyanskiy |
 | Client | [name / company] |
 | Executor | [name / agent] |
 
@@ -712,6 +712,6 @@ QUALITY
 
 ---
 
-*ANSS-Core Template v1.0 — Artem Khalomyansky — 2026*
+*ANSS-Core Template v1.0 — Artem Kholomyanskiy — 2026*
 *Template based on ANSS Standard v1.3*
 *For extended requirements use ANSS-Extended or ANSS-Enterprise*

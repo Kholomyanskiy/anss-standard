@@ -1,6 +1,6 @@
 ﻿# AI-Native System Specification Standard (ANSS)
 
-**by Artem Khalomyansky — Version 1.3 (2026)**
+**by Artem Kholomyanskiy — Version 1.3 (2026)**
 
 > A modern specification standard for building systems with AI agents. The evolution of classic TDD/SRS for the age of multi-agent development.
 
@@ -179,7 +179,7 @@ This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareA
 
 ## Author
 
-**Artem Khalomyansky** — AI automation specialist, founder of EVAI Consulting.
+**Artem Kholomyanskiy** — AI automation specialist, founder of EVAI Consulting.
 
 Specializes in AI-First methodology, specification-driven development, and building autonomous AI agent systems.
 

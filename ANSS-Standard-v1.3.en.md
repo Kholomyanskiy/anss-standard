@@ -1,5 +1,5 @@
 # AI-NATIVE SYSTEM SPECIFICATION STANDARD
-## Personal Standard by Artem Khalomyansky — Version 1.3, 2026
+## Personal Standard by Artem Kholomyanskiy — Version 1.3, 2026
 
 ---
 
@@ -1559,7 +1559,7 @@ After the change, verify:
 
 ---
 
-*Version 1.3 — Artem Khalomyansky — 2026*
+*Version 1.3 — Artem Kholomyanskiy — 2026*
 *Next scheduled revision: in 6 months*
 *Based on: GOST 34, IEEE 830, ISO/IEC 29148/25010/42001/42005,*
 *EU AI Act, GDPR, OWASP, C4 Model, Shape Up, ADR, SDD*
