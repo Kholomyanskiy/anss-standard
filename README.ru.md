@@ -7,6 +7,9 @@
 
 [English](README.md) | Русский
 
+> **Автор:** [Артём Холомянский](https://github.com/Kholomyanskiy) — AI Automation Consultant, EVAI Consulting  
+> **Контакт:** kholomyanskiy@gmail.com | [Telegram](https://t.me/kholomyanskiy) | [LinkedIn](https://linkedin.com/in/kholomyanskiy)
+
 ---
 
 ## Какую проблему решает этот стандарт

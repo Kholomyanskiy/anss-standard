@@ -7,6 +7,9 @@
 
 [Русский](README.ru.md) | English
 
+> **Author:** [Artem Kholomyanskiy](https://github.com/Kholomyanskiy) — AI Automation Consultant, EVAI Consulting  
+> **Contact:** kholomyanskiy@gmail.com | [Telegram](https://t.me/kholomyanskiy) | [LinkedIn](https://linkedin.com/in/kholomyanskiy)
+
 ---
 
 ## The problem this solves
