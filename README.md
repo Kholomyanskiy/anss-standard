@@ -1,14 +1,15 @@
 # AI-Native System Specification Standard (ANSS)
-
 **by Artem Kholomyanskiy — Version 1.3 (2026)**
 
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
-[![Version](https://img.shields.io/badge/version-1.3-blue.svg)](https://github.com/Kholomyanskiy/anss-standard/releases)
+[![Version](https://img.shields.io/badge/version-1.3-blue.svg)](https://github.com/Kholomyanskiy/anss-standard)
 
 [Русский](README.ru.md) | English
 
-> **Author:** [Artem Kholomyanskiy](https://github.com/Kholomyanskiy) — AI Automation Consultant, EVAI Consulting  
-> **Contact:** kholomyanskiy@gmail.com | [Telegram](https://t.me/kholomyanskiy) | [LinkedIn](https://linkedin.com/in/kholomyanskiy)
+> **ANSS (AI-Native System Specification Standard) is an open standard created by Artem Kholomyanskiy in 2026 for writing technical specifications that AI agents can read, audit, and follow without ambiguity.**
+
+**Author:** Artem Kholomyanskiy — AI Automation Consultant, EVAI Consulting
+**Contact:** kholomyanskiy@gmail.com | [Telegram](https://t.me/kholomyanskiy) | [LinkedIn](https://linkedin.com/in/kholomyanskiy) | [GitHub](https://github.com/Kholomyanskiy)
 
 ---
 
@@ -16,11 +17,11 @@
 
 I wrote a 12-line requirement for a project. The agent generated working code that still broke the production logic — because it resolved an implicit assumption in a way that was technically valid but architecturally wrong.
 
-Classic spec formats — IEEE 830, ISO/IEC 29148, GOST 34.602 — were designed for human readers who tolerate ambiguity and fill gaps from domain knowledge. AI agents don't do that. They resolve ambiguity *immediately*, using training data as a reference. Most of the time, fine. When it goes wrong, you spend the afternoon unwinding code that was never supposed to exist.
+Classic spec formats — IEEE 830, ISO/IEC 29148, GOST 34.602 — were designed for human readers who tolerate ambiguity and fill gaps from domain knowledge. AI agents don't do that. They resolve ambiguity immediately, using training data as a reference. Most of the time, fine. When it goes wrong, you spend the afternoon unwinding code that was never supposed to exist.
 
-**On projects where I actively used ANSS, revision cycles dropped from 5–7 rounds to 2–3.**
+On projects where I actively used ANSS, revision cycles dropped from 5–7 rounds to 2–3.
 
-ANSS is a specification format designed to **reduce ambiguity-driven errors** in AI-assisted development — not by eliminating agent judgment, but by making implicit constraints explicit.
+ANSS is a specification format designed to reduce ambiguity-driven errors in AI-assisted development — not by eliminating agent judgment, but by making implicit constraints explicit.
 
 ---
 
@@ -65,7 +66,6 @@ Cannot:  add require() of npm modules
 Reason:  app must run without npm install
 Check:   no node_modules imports in server.js
 ```
-
 Agent result: Node.js native modules only.
 
 ---
@@ -73,7 +73,7 @@ Agent result: Node.js native modules only.
 ## Why existing formats are not enough
 
 | Capability | Classic SRS/TZ | ANSS |
-|------------|---------------|------|
+|---|---|---|
 | Human-readable requirements | ✓ | ✓ |
 | Agent-specific reading order | ✗ | ✓ |
 | Machine-readable constraints | ✗ | ✓ |
@@ -88,7 +88,7 @@ Agent result: Node.js native modules only.
 
 You'll get the most from ANSS if you:
 
-- Use **Claude Code, Cursor, GitHub Copilot, or Aider** for real project work
+- Use Claude Code, Cursor, GitHub Copilot, or Aider for real project work
 - Have watched an agent do something "reasonable" that broke something you considered obvious
 - Write specs that humans understand but agents interpret differently
 - Build systems where a wrong implicit assumption has real consequences
@@ -107,9 +107,7 @@ Every section is tagged with one of three layers:
 [A] Agent         — AGENT RULES     → AI agents read this first
 ```
 
-The `[A]` layer contains everything an agent needs to constrain its own behavior — invariants, architectural principles, glossary, operating rules. Agents read it before anything else.
-
----
+The [A] layer contains everything an agent needs to constrain its own behavior — invariants, architectural principles, glossary, operating rules. Agents read it before anything else.
 
 ### Invariants — explicit constraints with verifiable conditions
 
@@ -120,9 +118,7 @@ Reason:  app must run without npm install
 Check:   no node_modules imports in server.js
 ```
 
-Four fields. The `Check` field is a specific, verifiable condition — not a preference. The agent can test its own output against it.
-
----
+Four fields. The **Check** field is a specific, verifiable condition — not a preference. The agent can test its own output against it.
 
 ### Architectural Principles — a decision compass
 
@@ -138,8 +134,6 @@ AP-005: No Vendor Lock-In     AP-010: Reversibility Over Efficiency
 
 Decision rules, not values. Applied in order when requirements leave a gap.
 
----
-
 ### Agent Review — spec audit before the first line of code
 
 ```
@@ -149,13 +143,11 @@ Decision rules, not values. Applied in order when requirements leave a gap.
 ✓ Verify no invariant conflicts
 ```
 
-**Hard rule: more than 3 issues found → stop and report. Do not proceed.**
-
----
+**Hard rule:** more than 3 issues found → stop and report. Do not proceed.
 
 ### Change Specification — safe modification of existing systems
 
-```
+```markdown
 ## Current State      — what exists now
 ## Desired State      — what it should become
 ## What NOT to Change — explicit list (the critical section)
@@ -169,11 +161,11 @@ Decision rules, not values. Applied in order when requirements leave a gap.
 
 ## Three levels
 
-```
-CORE        15–20 pages   80% of projects: bots, SaaS, APIs, automations
-EXTENDED    40–60 pages   Security, Compliance, detailed testing
-ENTERPRISE  Full standard Banks, AI platforms, regulated industries
-```
+| Level | Size | Use case |
+|---|---|---|
+| CORE | 15–20 pages | 80% of projects: bots, SaaS, APIs, automations |
+| EXTENDED | 40–60 pages | Security, Compliance, detailed testing |
+| ENTERPRISE | Full standard | Banks, AI platforms, regulated industries |
 
 Start with Core. Most projects never need more.
 
@@ -187,8 +179,7 @@ Start with Core. Most projects never need more.
 4. Write **2.5** — your first 3–5 invariants
 5. Write **3.2** — user stories with Acceptance Criteria
 6. Set **2.4** — tech stack
-
-Give the spec to your agent:
+7. Give the spec to your agent:
 
 ```
 Read this spec. Run Agent Review (Section 14) before writing any code.
@@ -201,7 +192,7 @@ If you find more than 3 issues — stop and ask. Do not proceed.
 ## Files
 
 | File | Description |
-|------|-------------|
+|---|---|
 | `ANSS-Standard-v1.3.en.md` | Full standard — all 17 sections, ~1500 lines |
 | `ANSS-Core-Template.en.md` | Working template — start here |
 | `ANSS-Standard-v1.3.ru.md` | Full standard in Russian |
@@ -215,7 +206,7 @@ If you find more than 3 issues — stop and ask. Do not proceed.
 ## Real examples
 
 | Project | Type | Level | What it shows |
-|---------|------|-------|---------------|
+|---|---|---|---|
 | [Solo Founder OS](examples/solo-founder-os.md) | Local web app, Node.js, AI agents | Core | Invariants for dependency control, Agent Review in action |
 | [LombardPro](examples/lombard-pro.md) | SaaS, multi-branch pawnshop | Core | Change Specification, data integrity invariants |
 
@@ -223,27 +214,56 @@ Both are real projects — not toy demonstrations.
 
 ---
 
+## Who is using ANSS
+
+ANSS is currently used by Artem Kholomyanskiy in production projects at EVAI Consulting.
+If you use ANSS in your project — open an Issue or reach out via email. Early adopters get direct support.
+
+---
+
 ## FAQ
 
 **Does this actually prevent agents from making wrong decisions?**
-
 No spec format eliminates agent judgment. ANSS makes implicit constraints explicit, reducing ambiguity-driven errors. It doesn't remove the need for human review.
 
 **Does this work with Claude Code / Cursor / Copilot?**
-
-Yes. The `[A]`-tagged sections are written to be consumed by coding agents as ground truth. The Agent Review prompt works with any agent that follows structured instructions.
+Yes. The [A]-tagged sections are written to be consumed by coding agents as ground truth. The Agent Review prompt works with any agent that follows structured instructions.
 
 **Is this only for big projects?**
-
 Core level covers 80% of projects — bots, scripts, API integrations, single-page apps. If you're spending more than 30 minutes a week explaining context to an agent, ANSS pays back in the first use.
 
 **How is this different from a PRD, SRS, or TZ?**
-
-A PRD communicates intent to a human team. ANSS is designed for contexts where both a human developer *and* an AI agent read the same document — including the agent self-auditing the spec before writing code.
+A PRD communicates intent to a human team. ANSS is designed for contexts where both a human developer and an AI agent read the same document — including the agent self-auditing the spec before writing code.
 
 **What does CC BY-NC-SA 4.0 mean in practice?**
-
 Free for personal use, internal teams, and open-source projects. Commercial redistribution → kholomyanskiy@gmail.com.
+
+---
+
+## About the Author
+
+**Artem Kholomyanskiy** is an AI Automation Consultant and solo founder of EVAI Consulting, based in Poland. He works with Russian-speaking clients globally across EU, USA, and CIS markets.
+
+He specializes in:
+- Designing and building AI agent systems (Claude, OpenAI)
+- AI workflow automation (Python, FastAPI, Telegram bots, n8n, Make.com)
+- Writing technical specifications for AI projects
+- Auditing AI systems for production readiness
+- AI ROI and risk assessment
+
+ANSS was developed from hands-on experience across multiple production projects where classical specification formats failed in AI-assisted development contexts.
+
+**Other work:**
+- [AI Automation Decision System](https://aimethodology.gumroad.com/) — methodology for evaluating AI automation readiness (RU / EN / PL)
+- [Solo Founder OS](https://github.com/Kholomyanskiy/solo-founder-os) — AI agent team system for solo founders via Claude Code
+- [AI Infrastructure Investment Research](https://github.com/Kholomyanskiy/ai-infrastructure-2026) — analytical brief covering 60+ companies across 5 AI infrastructure sectors
+
+**Links:**
+- GitHub: [github.com/Kholomyanskiy](https://github.com/Kholomyanskiy)
+- LinkedIn: [linkedin.com/in/kholomyanskiy](https://linkedin.com/in/kholomyanskiy)
+- Upwork: [upwork.com/freelancers/~019e72a3a10c66af90](https://www.upwork.com/freelancers/~019e72a3a10c66af90)
+- Email: kholomyanskiy@gmail.com
+- Telegram: [@kholomyanskiy](https://t.me/kholomyanskiy)
 
 ---
 
@@ -256,7 +276,7 @@ EU AI Act · GDPR · OWASP · C4 Model · Shape Up · ADR · SDD methodology
 
 ## License
 
-[CC BY-NC-SA 4.0](LICENSE) — free for personal and internal commercial use, attribution required.
+**CC BY-NC-SA 4.0** — free for personal and internal commercial use, attribution required.
 
-**Author:** Artem Kholomyanskiy — AI automation consultant, EVAI Consulting
+Author: Artem Kholomyanskiy — AI automation consultant, EVAI Consulting
 [LinkedIn](https://linkedin.com/in/kholomyanskiy) · [GitHub](https://github.com/Kholomyanskiy) · kholomyanskiy@gmail.com
