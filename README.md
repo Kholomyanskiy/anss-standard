@@ -189,6 +189,77 @@ If you find more than 3 issues — stop and ask. Do not proceed.
 
 ---
 
+## Already have a spec? Start here
+
+Most people don't write ANSS from scratch — they bring an existing PRD, TZ, or rough notes and want it converted. Pick your scenario below and copy the prompt to your agent.
+
+### Scenario A — You have a complete spec (fits in context, under ~15 pages)
+
+Put your existing document and `ANSS-Core-Template.md` in your project folder, then give your agent:
+
+```
+I have an existing specification: [filename].
+Convert it into ANSS-Core format using ANSS-Core-Template.md as the structure.
+
+First extract what's already there for Sections 1–4 (context, domain, 
+functional requirements). If something is missing, mark it as 
+[NEEDS CLARIFICATION] — do not invent business logic.
+
+Do not write any code at this step. Show me the draft spec first.
+```
+
+### Scenario A2 — You have a large spec (15+ pages, multiple files)
+
+Don't dump it all into context at once — this causes the same context-loss problem ANSS is designed to prevent. Process it in passes:
+
+```
+I have a large specification (~[X] pages / [Y] files): [source].
+Do NOT read and process it all at once.
+
+Step 1: Read only the table of contents / structure. Report back 
+what sections exist.
+
+Step 2: I'll tell you which section to start with. Process only 
+that section into the matching ANSS-Core section.
+
+Step 3: Stop. Show me the result. Wait for my "continue" before 
+the next section.
+
+Do not try to hold the whole document in context at once.
+```
+
+### Scenario B — You have fragments (a few sentences, a voice note transcript, a chat thread)
+
+```
+Here's what I know about the project so far: [paste text].
+This is raw, incomplete information — not a full spec.
+
+Fill in ANSS-Core-Template.md with what's actually here. 
+Everywhere data is missing, leave an explicit placeholder with 
+a question back to me — do not invent or assume business logic 
+to fill gaps.
+```
+
+### Scenario C — Starting from zero
+
+See Quick Start above — fill Sections 1.1, 2.1, 2.5, 3.2, 2.4 yourself, then run Agent Review.
+
+---
+
+### After any scenario — this step is not optional
+
+Once you have a draft spec, before any code is written:
+
+```
+Run Agent Review (Section 14) on this spec before writing any code.
+Report contradictions, missing edge cases, and invariant conflicts.
+If you find more than 3 issues — stop and ask. Do not proceed.
+```
+
+Skipping this step is the most common way ANSS fails to help — the spec exists, but nobody asked the agent to check itself against it before coding.
+
+---
+
 ## Files
 
 | File | Description |
