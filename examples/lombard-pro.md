@@ -1,3 +1,5 @@
+﻿> *Anonymized real-world example of a full ANSS-Core specification. External reviews: 9.2–9.4/10*
+
 # ANSS-CORE — ЛомбардПРО
 ## Система управления сетью ломбардов
 
@@ -71,7 +73,8 @@
 ## 1.3 Экономика
 
 **Стоимость разработки:**
-- CAPEX (разработка): 36 000 zł ≈ $10 000
+
+*Суммы удалены из публичной версии. Структура расчёта: CAPEX разработки + OPEX хостинга ≈ $10/мес.*
 
 **Операционные расходы после внедрения:**
 - Railway (backend hosting): $0–10/мес
@@ -164,7 +167,7 @@
 - Бесплатные tier Supabase/Railway — без гарантированного SLA провайдера
 
 **Бизнес-ограничения:**
-- Бюджет: 36 000 zł (фиксировано)
+- Бюджет: удалён из публичной версии
 - Дедлайн: нет жёсткого
 - Команда: Артём Холомянский + Claude Code
 
@@ -216,7 +219,7 @@ INV-003: Операции нельзя удалять
 Проверка: нет DELETE endpoint'ов для операций. Только флаг is_active=false (soft delete) с записью кто деактивировал и почему.
 
 INV-004: Маршрут изделия подтверждает только владелец
-Нельзя: менять статус инкассированного изделия на направление (→ скупщик / → физлицо / → Киев / → магазин) без нажатия кнопки владельцем в Telegram.
+Нельзя: менять статус инкассированного изделия на направление (→ скупщик / → физлицо / → [Город] / → магазин) без нажатия кнопки владельцем в Telegram.
 Причина: контроль от злоупотреблений — сотрудник не решает куда уходит изделие.
 Проверка: смена статуса на routing-статус требует owner_approved=true в таблице pledges.
 
@@ -326,7 +329,7 @@ US-003: Подтверждение маршрута владельцем
 Чтобы сотрудник видел куда отправить и всё было зафиксировано
 
 Acceptance Criteria:
-- [ ] Кнопки: [Покупатель А] [Физлицо] [Киев] [В магазин] [Придержать] [Отменить]
+- [ ] Кнопки: [Покупатель А] [Физлицо] [Город] [В магазин] [Придержать] [Отменить]
 - [ ] После нажатия — статус изделия меняется, сотрудник получает уведомление
 - [ ] Повторное нажатие на уже подтверждённое изделие → сообщение «Маршрут уже выбран»
 - [ ] Изменить маршрут после подтверждения — только через админ-панель с логом
@@ -633,7 +636,7 @@ Response 409: { "error": "CONFLICT", "message": "Pledge already incasso'd" }
 
 POST /api/v1/pledges/{id}/route
 Auth: Bearer JWT (owner role)
-Request: { destination: "buyer_a|personal|kyiv|shop|hold" }
+Request: { destination: "buyer_a|personal|city|shop|hold" }
 Response 200: { "pledge_id": UUID, "status": "routed", "destination": "..." }
 Response 403: { "error": "FORBIDDEN" } // только владелец
 
@@ -683,7 +686,7 @@ CREATE TABLE pledges (
   incasso_date    DATE,
   estimated_value NUMERIC,
   status          TEXT NOT NULL,       -- 'active','on_branch','hold','routed_buyer',
-                                       -- 'routed_personal','routed_kyiv','in_shop',
+                                       -- 'routed_personal','routed_city','in_shop',
                                        -- 'redeemed','repledge','sold'
   photo_url       TEXT,
   source          TEXT DEFAULT 'pawnexpert',  -- 'pawnexpert','manual'
@@ -1118,3 +1121,4 @@ ROLLBACK:
 *ANSS-Core v0.2 Draft — Артём Холомянский — 2026-06-01*
 *На основе lombard_FULL_TZ.md v2.0 (май 2026)*
 *Шаблон: ANSS Standard v1.3*
+

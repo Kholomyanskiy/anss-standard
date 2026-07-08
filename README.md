@@ -338,6 +338,15 @@ ANSS was developed from hands-on experience across multiple production projects 
 
 ---
 
+## Examples
+
+The [`examples/`](examples/) folder contains anonymized real-world specifications written in ANSS-Core format — ready to study and adapt.
+
+- [LombardPRO](examples/lombard-pro.md) ([EN](examples/lombard-pro.en.md)) — full ANSS-Core spec for a multi-branch pawnshop management system. Anonymized real production project, external reviews: 9.2–9.4/10.
+- [Solo Founder OS](examples/solo-founder-os.md) ([EN](examples/solo-founder-os.en.md)) — spec for a local web app with an AI agent team via Claude Code.
+
+---
+
 ## Based on
 
 GOST 34.602 · IEEE 830 · ISO/IEC 29148 · ISO/IEC 25010 · ISO/IEC 42001/42005

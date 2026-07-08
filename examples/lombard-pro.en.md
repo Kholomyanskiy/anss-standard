@@ -1,4 +1,5 @@
-> *Translated from Russian. Original: [lombard-pro.md](lombard-pro.md)*
+﻿> *Translated from Russian. Original: [lombard-pro.md](lombard-pro.md)*
+> *Anonymized real-world example of a full ANSS-Core specification. External reviews: 9.2–9.4/10*
 
 # ANSS-CORE — LombardPRO
 ## Pawnshop Network Management System
@@ -74,7 +75,8 @@ The business is growing (3 branches), and manual control does not scale. Every f
 ## 1.3 Economics
 
 **Development cost:**
-- CAPEX (development): 36,000 zł ≈ $10,000
+
+*Amounts removed from the public version. Cost structure: development CAPEX + hosting OPEX ≈ $10/mo.*
 
 **Operating expenses after deployment:**
 - Railway (backend hosting): $0–10/month
@@ -167,7 +169,7 @@ In code: `pledges.interest_rate`.
 - Free tiers of Supabase/Railway — no guaranteed SLA from the provider
 
 **Business constraints:**
-- Budget: 36,000 zł (fixed)
+- Budget: removed from public version
 - Deadline: none hard
 - Team: Artem Kholomyanskiy + Claude Code
 
@@ -219,7 +221,7 @@ Reason: the audit log must be complete and immutable.
 Check: no DELETE endpoints for operations. Only the flag is_active=false (soft delete) with a record of who deactivated it and why.
 
 INV-004: Item routing confirmed by owner only
-Cannot: change the status of a foreclosed item to a routing destination (→ buyer / → personal account / → Kyiv / → shop) without the owner pressing a button in Telegram.
+Cannot: change the status of a foreclosed item to a routing destination (→ buyer / → personal account / → [City] / → shop) without the owner pressing a button in Telegram.
 Reason: abuse prevention — employees do not decide where an item goes.
 Check: changing status to a routing status requires owner_approved=true in the pledges table.
 
@@ -329,7 +331,7 @@ I want to route a foreclosed item with a single button press in Telegram
 So that the employee knows where to send it and everything is recorded
 
 Acceptance Criteria:
-- [ ] Buttons: [Buyer A] [Personal Account] [Kyiv] [To shop] [Hold] [Cancel]
+- [ ] Buttons: [Buyer A] [Personal Account] [City] [To shop] [Hold] [Cancel]
 - [ ] After pressing — item status changes, employee receives a notification
 - [ ] Pressing again on an already-confirmed item → message "Routing already set"
 - [ ] Changing routing after confirmation — only via admin panel with a log entry
@@ -636,7 +638,7 @@ Response 409: { "error": "CONFLICT", "message": "Pledge already incasso'd" }
 
 POST /api/v1/pledges/{id}/route
 Auth: Bearer JWT (owner role)
-Request: { destination: "buyer_a|personal|kyiv|shop|hold" }
+Request: { destination: "buyer_a|personal|city|shop|hold" }
 Response 200: { "pledge_id": UUID, "status": "routed", "destination": "..." }
 Response 403: { "error": "FORBIDDEN" } // owner only
 
@@ -686,7 +688,7 @@ CREATE TABLE pledges (
   incasso_date    DATE,
   estimated_value NUMERIC,
   status          TEXT NOT NULL,       -- 'active','on_branch','hold','routed_buyer',
-                                       -- 'routed_personal','routed_kyiv','in_shop',
+                                       -- 'routed_personal','routed_city','in_shop',
                                        -- 'redeemed','repledge','sold'
   photo_url       TEXT,
   source          TEXT DEFAULT 'pawnexpert',  -- 'pawnexpert','manual'
@@ -1121,3 +1123,4 @@ REQUIRES FOLLOW-UP
 *ANSS-Core v0.2 Draft — Artem Kholomyanskiy — 2026-06-01*
 *Based on lombard_FULL_TZ.md v2.0 (May 2026)*
 *Template: ANSS Standard v1.3*
+
