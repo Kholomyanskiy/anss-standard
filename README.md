@@ -327,7 +327,7 @@ ANSS was developed from hands-on experience across multiple production projects 
 **Other work:**
 - [AI Automation Decision System](https://aimethodology.gumroad.com/) — methodology for evaluating AI automation readiness (RU / EN / PL)
 - [Solo Founder OS](https://github.com/Kholomyanskiy/solo-founder-os) — AI agent team system for solo founders via Claude Code
-- [AI Infrastructure Investment Research](https://github.com/Kholomyanskiy/ai-infrastructure-2026) — analytical brief covering 60+ companies across 5 AI infrastructure sectors
+- [AI Infrastructure Investment Research](https://github.com/Kholomyanskiy/ai-infrastructure-2026) — analytical brief covering 40 companies across 5 AI infrastructure sectors
 
 **Links:**
 - GitHub: [github.com/Kholomyanskiy](https://github.com/Kholomyanskiy)
