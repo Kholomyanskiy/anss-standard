@@ -2,6 +2,26 @@
 
 All notable changes to ANSS Standard will be documented in this file.
 
+## [1.4] — 2026-07-13
+
+### Changed
+- License changed from CC BY-NC-SA 4.0 to CC BY 4.0: free for any use including
+  commercial, attribution required. Specs written with ANSS carry no license obligations.
+- Detail levels unified across all documents: CORE / EXTENDED / ENTERPRISE
+  (previously the Standard used MINIMAL / STANDARD / FULL)
+- Invariant format unified to four fields: Name / Cannot / Reason / Check —
+  in the Standard, the Core Template, and all examples in Section 2.5
+- Single canonical agent reading order defined in the layer-markup section;
+  Sections 2.1, 6.4 and 15.2 now reference it (previously three conflicting orders)
+- Section 6.3: structured outputs / JSON schema stated as the primary determinism
+  mechanism; temperature guidance kept with a note that some newer models ignore it
+- README: clarified that the Core Template and the full Standard use different
+  section numbering (Agent Review = Section 14 in Template, 15.6 in Standard)
+
+### Fixed
+- Core Template (v1.1): agent instruction reading order aligned with the canonical
+  order; EN invariant field "Verification" renamed to "Check"
+
 ## [1.3.2] — 2026-06-02
 
 ### Added

@@ -1,8 +1,8 @@
 # AI-Native System Specification Standard (ANSS)
-**by Artem Kholomyanskiy — Version 1.3 (2026)**
+**by Artem Kholomyanskiy — Version 1.4 (2026)**
 
-[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
-[![Version](https://img.shields.io/badge/version-1.3-blue.svg)](https://github.com/Kholomyanskiy/anss-standard)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![Version](https://img.shields.io/badge/version-1.4-blue.svg)](https://github.com/Kholomyanskiy/anss-standard)
 
 [Русский](README.ru.md) | English
 
@@ -182,7 +182,7 @@ Start with Core. Most projects never need more.
 7. Give the spec to your agent:
 
 ```
-Read this spec. Run Agent Review (Section 14) before writing any code.
+Read this spec. Run Agent Review (Section 14 of the Core Template) before writing any code.
 Report all contradictions, missing edge cases, and invariant conflicts.
 If you find more than 3 issues — stop and ask. Do not proceed.
 ```
@@ -251,10 +251,12 @@ See Quick Start above — fill Sections 1.1, 2.1, 2.5, 3.2, 2.4 yourself, then r
 Once you have a draft spec, before any code is written:
 
 ```
-Run Agent Review (Section 14) on this spec before writing any code.
+Run Agent Review (Section 14 of the Core Template) on this spec before writing any code.
 Report contradictions, missing edge cases, and invariant conflicts.
 If you find more than 3 issues — stop and ask. Do not proceed.
 ```
+
+Note: the Core Template and the full Standard use different section numbering — Agent Review is Section 14 in the Template and Section 15.6 in the full Standard.
 
 Skipping this step is the most common way ANSS fails to help — the spec exists, but nobody asked the agent to check itself against it before coding.
 
@@ -264,9 +266,9 @@ Skipping this step is the most common way ANSS fails to help — the spec exists
 
 | File | Description |
 |---|---|
-| `ANSS-Standard-v1.3.en.md` | Full standard — all 17 sections, ~1500 lines |
+| `ANSS-Standard-v1.4.en.md` | Full standard — all 17 sections, ~1500 lines |
 | `ANSS-Core-Template.en.md` | Working template — start here |
-| `ANSS-Standard-v1.3.ru.md` | Full standard in Russian |
+| `ANSS-Standard-v1.4.ru.md` | Full standard in Russian |
 | `ANSS-Core-Template.ru.md` | Template in Russian |
 | `examples/` | Real filled examples |
 | `AGENTS.md` | Instructions for AI agents scanning this repo |
@@ -306,8 +308,8 @@ Core level covers 80% of projects — bots, scripts, API integrations, single-pa
 **How is this different from a PRD, SRS, or TZ?**
 A PRD communicates intent to a human team. ANSS is designed for contexts where both a human developer and an AI agent read the same document — including the agent self-auditing the spec before writing code.
 
-**What does CC BY-NC-SA 4.0 mean in practice?**
-Free for personal use, internal teams, and open-source projects. Commercial redistribution → kholomyanskiy@gmail.com.
+**What does CC BY 4.0 mean in practice?**
+Free for any use — personal, internal, commercial, client projects. The only requirement: attribution with a link to this repository. Specifications you write using ANSS are your own work and carry no license obligations.
 
 ---
 
@@ -356,7 +358,7 @@ EU AI Act · GDPR · OWASP · C4 Model · Shape Up · ADR · SDD methodology
 
 ## License
 
-**CC BY-NC-SA 4.0** — free for personal and internal commercial use, attribution required.
+**CC BY 4.0** — free for any use, including commercial. Attribution required: link to this repository.
 
 Author: Artem Kholomyanskiy — AI automation consultant, EVAI Consulting
 [LinkedIn](https://linkedin.com/in/kholomyanskiy) · [GitHub](https://github.com/Kholomyanskiy) · kholomyanskiy@gmail.com

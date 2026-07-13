@@ -1,5 +1,5 @@
 # AI-NATIVE SYSTEM SPECIFICATION STANDARD
-## Personal Standard by Artem Kholomyanskiy — Version 1.3, 2026
+## Personal Standard by Artem Kholomyanskiy — Version 1.4, 2026
 
 ---
 
@@ -28,7 +28,18 @@ Each section is marked with one of three layers:
                               Configuration, rules, context, invariants.
 ```
 
-**Agents reading a spec:** start with [A] sections, then [E], then [D] as needed.
+**Canonical agent reading order** *(single source of truth for the entire standard)*:
+
+```
+1. Invariants              (Section 2.5)
+2. Principles              (Section 2.6)
+3. Domain Glossary         (Section 2.1)
+4. Architecture            (Section 5)
+5. Current task specification
+6. Remaining [E] and [D] sections — as needed
+```
+
+All other mentions of reading order in this document refer to this block.
 
 ---
 
@@ -96,13 +107,13 @@ DATA:
 STEP 2: DETAIL LEVEL RECOMMENDATION
 ════════════════════════════════════════════════════
 
-MINIMAL  → Micro or Small + Low/Medium criticality
+CORE       → Micro or Small + Low/Medium criticality
            Only ⚡ required sections
 
-STANDARD → Medium OR High criticality
+EXTENDED   → Medium OR High criticality
            ⚡ required + applicable 📋 sections
 
-FULL     → Large OR Critical OR regulated industry
+ENTERPRISE → Large OR Critical OR regulated industry
            All applicable sections
 
 Suggest a level. Wait for confirmation.
@@ -176,13 +187,13 @@ If > 3 items not completed — revise the spec.
 
 ## 0.2 Detail Level ✅
 ```
-Selected level: [MINIMAL / STANDARD / FULL]
+Selected level: [CORE / EXTENDED / ENTERPRISE]
 Rationale: ___
 
-MINIMAL  → sections: 0, 1.1-1.3, 2.1-2.5, 3.1-3.4, 4.1-4.2,
+CORE       → sections: 0, 1.1-1.3, 2.1-2.5, 3.1-3.4, 4.1-4.2,
            5.2, 7.1-7.2, 11.2, 14, 15
-STANDARD → MINIMAL + all applicable 📋 sections
-FULL     → all applicable sections
+EXTENDED   → CORE + all applicable 📋 sections
+ENTERPRISE → all applicable sections
 ```
 
 ## 0.3 Document Purpose ✅
@@ -282,7 +293,7 @@ FULL     → all applicable sections
 
 ## 2.1 Domain Glossary ✅
 
-*⚠️ Agent reads this section FIRST — before all others.*
+*⚠️ Agent reads the glossary third — after Invariants (2.5) and Principles (2.6), before all other sections. See the canonical reading order.*
 
 *Format for each entry:*
 ```markdown
@@ -328,11 +339,13 @@ Expected count:      [expected number]
 *Invariants are absolute constraints. Must never be violated under any circumstances.*
 *The agent stops if the task requires violating an invariant.*
 
+*Format — four fields, uniform across the entire standard:*
+
 ```
 INV-001: [Name]
-Description: [what is forbidden to violate]
-Reason: [why this is an invariant]
-Verification: [how to confirm the invariant is upheld]
+Cannot:  [specific forbidden action]
+Reason:  [why this is an invariant]
+Check:   [verifiable condition — how to confirm the invariant is upheld]
 
 INV-002: [Name]
 ...
@@ -341,20 +354,24 @@ INV-002: [Name]
 *Example invariants:*
 ```
 INV-001: Atomicity of Financial Operations
-Balance must not be changed outside a transaction. Partial execution is not allowed.
-Verification: all balance operations use SELECT FOR UPDATE + transactions.
+Cannot:  change balance outside a transaction; partial execution is not allowed
+Reason:  balance desynchronization = direct financial loss
+Check:   all balance operations use SELECT FOR UPDATE + transactions
 
 INV-002: API Backward Compatibility
-Fields in public API responses must not be removed or renamed.
-Verification: API contract does not break existing clients.
+Cannot:  remove or rename fields in public API responses
+Reason:  existing clients would break without warning
+Check:   API contract does not break existing clients
 
 INV-003: Audit Log Immutability
-audit_log records must not be modified or deleted. Append only.
-Verification: no UPDATE/DELETE on the audit_log table.
+Cannot:  modify or delete audit_log records; append only
+Reason:  the audit log is legal evidence and a compliance requirement
+Check:   no UPDATE/DELETE on the audit_log table
 
 INV-004: User Data Preservation
-User data must not be deleted without soft-delete and confirmation.
-Verification: all delete operations use deleted_at, not physical deletion.
+Cannot:  delete user data without soft-delete and confirmation
+Reason:  recovery from accidental deletion must be possible
+Check:   all delete operations use deleted_at, not physical deletion
 ```
 
 ## 2.6 ARCHITECTURAL PRINCIPLES [A] ✅
@@ -714,19 +731,20 @@ When: when adding an integration
 ## 6.3 Agent Configuration and Prompts ✅
 - System prompts: version, stored in Git
 - Versioning: semver (MAJOR.MINOR.PATCH)
-- **Temperature for agentic tasks: 0.0–0.3** (higher = schema drift)
-- **Temperature for creative tasks: 0.7–1.0**
+- Output determinism for agentic tasks: **structured outputs / JSON schema — the primary mechanism**; temperature 0.0–0.3 where the parameter is supported (some newer models ignore or reject it)
+- **Temperature for creative tasks: 0.7–1.0** (where supported)
 - AGENTS.md / CLAUDE.md — required artifact
 - Forbidden Patterns for agents
 
 ## 6.4 Context Management ✅
-- Order of injection into context:
+- Order of injection into context *(matches the canonical reading order)*:
   1. System prompt / rules
   2. Invariants (Section 2.5)
-  3. Domain glossary
-  4. Relevant task context
-  5. History (if needed)
-  6. Current request
+  3. Principles (Section 2.6)
+  4. Domain glossary (Section 2.1)
+  5. Relevant task context
+  6. History (if needed)
+  7. Current request
 - Strategy when context is exhausted
 - Persistent memory (if needed): Mem0 / Zep / Letta
 
@@ -1238,13 +1256,14 @@ Contradiction detected → report explicitly.
 
 ## 15.2 Context Management ✅
 
-**Order of injection to agent:**
+**Order of injection to agent** *(matches the canonical reading order)*:
 1. CLAUDE.md (global rules)
-2. Invariants (Section 2.5) ← new
-3. ARCHITECTURE.md
+2. Invariants (Section 2.5)
+3. Principles (Section 2.6)
 4. GLOSSARY.md
-5. MODULE_SPEC (current task)
-6. SESSION.md / current state
+5. ARCHITECTURE.md
+6. MODULE_SPEC (current task)
+7. SESSION.md / current state
 
 **Context recovery protocol after a break:**
 ```
@@ -1496,13 +1515,13 @@ After the change, verify:
 
 ---
 
-# QUICK START — MINIMAL SPECIFICATION
+# QUICK START — CORE SPECIFICATION
 
 *For Micro and Small projects, Low/Medium criticality.*
 
 ```
 0.1  Title page
-0.2  Level: MINIMAL
+0.2  Level: CORE
 0.4  Glossary and conventions
 1.1  Business context (brief)
 1.2  Problem and goal
@@ -1559,7 +1578,7 @@ After the change, verify:
 
 ---
 
-*Version 1.3 — Artem Kholomyanskiy — 2026*
+*Version 1.4 — Artem Kholomyanskiy — 2026*
 *Next scheduled revision: in 6 months*
 *Based on: GOST 34, IEEE 830, ISO/IEC 29148/25010/42001/42005,*
 *EU AI Act, GDPR, OWASP, C4 Model, Shape Up, ADR, SDD*

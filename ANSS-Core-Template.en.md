@@ -1,12 +1,12 @@
 # ANSS-CORE TEMPLATE
 ## AI-Native System Specification — Working Template
 
-**Template version:** 1.0
+**Template version:** 1.1
 **Level:** CORE (80% of projects)
 **Volume:** 15–20 pages for a filled document
 
 > This is a working template for daily use.
-> The full standard and rationale for each section — in ANSS Standard v1.3.
+> The full standard and rationale for each section — in ANSS Standard v1.4.
 > Fill in fields in [brackets]. Delete italic hints after filling.
 
 ---
@@ -18,9 +18,9 @@
 **For agents:**
 ```
 1. Read the entire document
-2. Re-read the GLOSSARY (section 2.1) — this is the language of the project
-3. Memorize the INVARIANTS (section 2.5) — they must never be violated
-4. Read the PRINCIPLES (section 2.6) — your compass under uncertainty
+2. Memorize the INVARIANTS (section 2.5) — they must never be violated
+3. Read the PRINCIPLES (section 2.6) — your compass under uncertainty
+4. Re-read the GLOSSARY (section 2.1) — this is the language of the project
 5. Perform Agent Review (section 14) BEFORE writing code
 6. When in doubt — STOP AND ASK
 ```
@@ -46,7 +46,7 @@
 | 0.1 | [date] | First draft |
 
 **Detail level:** CORE
-*(if needed, expand to EXTENDED or ENTERPRISE — see ANSS Standard v1.3)*
+*(if needed, expand to EXTENDED or ENTERPRISE — see ANSS Standard v1.4)*
 
 ---
 
@@ -109,7 +109,7 @@
 
 ## 2.1 Glossary
 
-*Agent reads this section FIRST. All project-specific terms go here.*
+*Agent reads the glossary after Invariants (2.5) and Principles (2.6). All project-specific terms go here.*
 
 **[Term 1]**
 Definition: [exact meaning in the context of the project]
@@ -174,12 +174,12 @@ In code: [...]
 INV-001: [Name]
 Cannot: [what is forbidden]
 Reason: [why this is an invariant]
-Verification: [how to confirm it is upheld]
+Check: [verifiable condition — how to confirm it is upheld]
 
 INV-002: [Name]
 Cannot: [...]
 Reason: [...]
-Verification: [...]
+Check: [...]
 ```
 
 *Minimum 3–5 invariants for any project.*
@@ -713,5 +713,5 @@ QUALITY
 ---
 
 *ANSS-Core Template v1.0 — Artem Kholomyanskiy — 2026*
-*Template based on ANSS Standard v1.3*
+*Template based on ANSS Standard v1.4*
 *For extended requirements use ANSS-Extended or ANSS-Enterprise*
