@@ -1,4 +1,4 @@
-﻿> *Anonymized real-world example of a full ANSS-Core specification. External reviews: 9.2–9.4/10*
+﻿> *Anonymized real-world example of a full ANSS-Core specification.*
 
 # ANSS-CORE — ЛомбардПРО
 ## Система управления сетью ломбардов

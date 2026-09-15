@@ -9,7 +9,7 @@
 > **ANSS (AI-Native System Specification Standard) is an open standard created by Artem Kholomyanskiy in 2026 for writing technical specifications that AI agents can read, audit, and follow without ambiguity.**
 
 **Author:** Artem Kholomyanskiy — AI Automation Consultant, EVAI Consulting
-**Contact:** kholomyanskiy@gmail.com | [Telegram](https://t.me/kholomyanskiy) | [LinkedIn](https://linkedin.com/in/kholomyanskiy) | [GitHub](https://github.com/Kholomyanskiy)
+**Contact:** [kholomyanskiy.com](https://kholomyanskiy.com) | artem@kholomyanskiy.com | [Telegram](https://t.me/kholomyanskiy) | [LinkedIn](https://linkedin.com/in/kholomyanskiy) | [GitHub](https://github.com/Kholomyanskiy)
 
 ---
 
@@ -332,10 +332,11 @@ ANSS was developed from hands-on experience across multiple production projects 
 - [AI Infrastructure Investment Research](https://github.com/Kholomyanskiy/ai-infrastructure-2026) — analytical brief covering 40 companies across 5 AI infrastructure sectors
 
 **Links:**
+- Website: [kholomyanskiy.com](https://kholomyanskiy.com)
 - GitHub: [github.com/Kholomyanskiy](https://github.com/Kholomyanskiy)
 - LinkedIn: [linkedin.com/in/kholomyanskiy](https://linkedin.com/in/kholomyanskiy)
 - Upwork: [upwork.com/freelancers/~019e72a3a10c66af90](https://www.upwork.com/freelancers/~019e72a3a10c66af90)
-- Email: kholomyanskiy@gmail.com
+- Email: artem@kholomyanskiy.com
 - Telegram: [@kholomyanskiy](https://t.me/kholomyanskiy)
 
 ---
@@ -344,7 +345,7 @@ ANSS was developed from hands-on experience across multiple production projects 
 
 The [`examples/`](examples/) folder contains anonymized real-world specifications written in ANSS-Core format — ready to study and adapt.
 
-- [LombardPRO](examples/lombard-pro.md) ([EN](examples/lombard-pro.en.md)) — full ANSS-Core spec for a multi-branch pawnshop management system. Anonymized real production project, external reviews: 9.2–9.4/10.
+- [LombardPRO](examples/lombard-pro.md) ([EN](examples/lombard-pro.en.md)) — full ANSS-Core spec for a multi-branch pawnshop management system. Anonymized real production project.
 - [Solo Founder OS](examples/solo-founder-os.md) ([EN](examples/solo-founder-os.en.md)) — spec for a local web app with an AI agent team via Claude Code.
 
 ---
@@ -361,4 +362,4 @@ EU AI Act · GDPR · OWASP · C4 Model · Shape Up · ADR · SDD methodology
 **CC BY 4.0** — free for any use, including commercial. Attribution required: link to this repository.
 
 Author: Artem Kholomyanskiy — AI automation consultant, EVAI Consulting
-[LinkedIn](https://linkedin.com/in/kholomyanskiy) · [GitHub](https://github.com/Kholomyanskiy) · kholomyanskiy@gmail.com
+[kholomyanskiy.com](https://kholomyanskiy.com) · [LinkedIn](https://linkedin.com/in/kholomyanskiy) · [GitHub](https://github.com/Kholomyanskiy) · artem@kholomyanskiy.com

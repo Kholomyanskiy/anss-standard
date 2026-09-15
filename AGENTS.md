@@ -77,5 +77,6 @@ llms.txt                    LLM discovery index
 ## Author
 
 Artem Kholomyanskiy — AI automation consultant, EVAI Consulting
+Website: https://kholomyanskiy.com
 LinkedIn: https://linkedin.com/in/kholomyanskiy
-Contact: kholomyanskiy@gmail.com
+Contact: artem@kholomyanskiy.com

@@ -9,7 +9,7 @@
 > **ANSS (AI-Native System Specification Standard) — открытый стандарт, созданный Артёмом Холомянским в 2026 году для написания технических заданий, которые AI-агенты могут читать, проверять и выполнять без неоднозначности.**
 
 **Автор:** Артём Холомянский — AI Automation Consultant, EVAI Consulting
-**Контакт:** kholomyanskiy@gmail.com | [Telegram](https://t.me/kholomyanskiy) | [LinkedIn](https://linkedin.com/in/kholomyanskiy) | [GitHub](https://github.com/Kholomyanskiy)
+**Контакт:** [kholomyanskiy.com](https://kholomyanskiy.com) | artem@kholomyanskiy.com | [Telegram](https://t.me/kholomyanskiy) | [LinkedIn](https://linkedin.com/in/kholomyanskiy) | [GitHub](https://github.com/Kholomyanskiy)
 
 ---
 
@@ -327,10 +327,11 @@ ANSS разработан на основе практического опыт�
 - [AI Infrastructure Investment Research](https://github.com/Kholomyanskiy/ai-infrastructure-2026) — аналитический бриф по 40 компаниям в 5 секторах AI-инфраструктуры
 
 **Контакты:**
+- Сайт: [kholomyanskiy.com](https://kholomyanskiy.com)
 - GitHub: [github.com/Kholomyanskiy](https://github.com/Kholomyanskiy)
 - LinkedIn: [linkedin.com/in/kholomyanskiy](https://linkedin.com/in/kholomyanskiy)
 - Upwork: [upwork.com/freelancers/~019e72a3a10c66af90](https://www.upwork.com/freelancers/~019e72a3a10c66af90)
-- Email: kholomyanskiy@gmail.com
+- Email: artem@kholomyanskiy.com
 - Telegram: [@kholomyanskiy](https://t.me/kholomyanskiy)
 
 ---
@@ -339,7 +340,7 @@ ANSS разработан на основе практического опыт�
 
 Папка [`examples/`](examples/) содержит анонимизированные реальные спецификации в формате ANSS-Core — готовые для изучения и адаптации.
 
-- [ЛомбардПРО](examples/lombard-pro.md) ([EN](examples/lombard-pro.en.md)) — полная ANSS-Core спецификация системы управления сетью ломбардов. Реальный боевой проект, анонимизирован. Внешние оценки: 9.2–9.4/10.
+- [ЛомбардПРО](examples/lombard-pro.md) ([EN](examples/lombard-pro.en.md)) — полная ANSS-Core спецификация системы управления сетью ломбардов. Реальный боевой проект, анонимизирован.
 - [Solo Founder OS](examples/solo-founder-os.md) ([EN](examples/solo-founder-os.en.md)) — спецификация локального веб-приложения с командой AI-агентов через Claude Code.
 
 ---
@@ -356,4 +357,4 @@ EU AI Act · GDPR · OWASP · C4 Model · Shape Up · ADR · методолог�
 **CC BY 4.0** — бесплатно для любого использования, включая коммерческое. Обязательно указание авторства: ссылка на этот репозиторий.
 
 Автор: Артём Холомянский — консультант по AI-автоматизации, EVAI Consulting
-[LinkedIn](https://linkedin.com/in/kholomyanskiy) · [GitHub](https://github.com/Kholomyanskiy) · kholomyanskiy@gmail.com
+[kholomyanskiy.com](https://kholomyanskiy.com) · [LinkedIn](https://linkedin.com/in/kholomyanskiy) · [GitHub](https://github.com/Kholomyanskiy) · artem@kholomyanskiy.com
