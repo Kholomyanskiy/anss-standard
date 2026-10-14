@@ -1,0 +1,5 @@
+﻿.env
+_private/
+_notes/
+.DS_Store
+Thumbs.db
