@@ -8,6 +8,21 @@
 
 > **ANSS (AI-Native System Specification Standard) is an open standard created by Artem Kholomyanskiy in 2026 for writing technical specifications that AI agents can read, audit, and follow without ambiguity.**
 
+## Use ANSS in your project
+
+```
+# Claude Code
+curl -O https://raw.githubusercontent.com/Kholomyanskiy/anss-standard/master/templates/CLAUDE.md
+# Cursor
+curl -O https://raw.githubusercontent.com/Kholomyanskiy/anss-standard/master/templates/.cursorrules
+# Codex, Copilot and other agents
+curl -O https://raw.githubusercontent.com/Kholomyanskiy/anss-standard/master/templates/AGENTS.md
+```
+
+Open the downloaded file and set `Spec:` to the path of your ANSS spec.
+
+**Claude Code skill** (write, convert, and review ANSS specs): copy the `skills/anss/` folder to `~/.claude/skills/anss/` (all projects) or `.claude/skills/anss/` (one project).
+
 **Author:** Artem Kholomyanskiy — AI Implementation Consultant, EVAI Consulting
 **Contact:** [kholomyanskiy.com](https://kholomyanskiy.com) | artem@kholomyanskiy.com | [Telegram](https://t.me/kholomyanskiy) | [LinkedIn](https://linkedin.com/in/kholomyanskiy) | [GitHub](https://github.com/Kholomyanskiy)
 
@@ -132,7 +147,7 @@ AP-004: Human Override Always AP-009: YAGNI
 AP-005: No Vendor Lock-In     AP-010: Reversibility Over Efficiency
 ```
 
-Decision rules, not values. Applied in order when requirements leave a gap.
+Decision rules, not values. Applied when requirements leave a gap. If principles conflict, the agent stops and asks.
 
 ### Agent Review — spec audit before the first line of code
 
@@ -272,6 +287,8 @@ Skipping this step is the most common way ANSS fails to help — the spec exists
 | `ANSS-Core-Template.ru.md` | Template in Russian |
 | `examples/` | Real filled examples |
 | `AGENTS.md` | Instructions for AI agents scanning this repo |
+| `templates/` | Agent presets: `CLAUDE.md`, `.cursorrules`, `AGENTS.md` — copy one to your project root |
+| `skills/anss/` | Claude Code skill: write, convert, and review ANSS specs |
 | `llms.txt` | Discovery index for LLM-based search |
 
 ---

@@ -8,6 +8,21 @@
 
 > **ANSS (AI-Native System Specification Standard) — открытый стандарт, созданный Артёмом Холомянским в 2026 году для написания технических заданий, которые AI-агенты могут читать, проверять и выполнять без неоднозначности.**
 
+## Как подключить ANSS к проекту
+
+```
+# Claude Code
+curl -O https://raw.githubusercontent.com/Kholomyanskiy/anss-standard/master/templates/CLAUDE.md
+# Cursor
+curl -O https://raw.githubusercontent.com/Kholomyanskiy/anss-standard/master/templates/.cursorrules
+# Codex, Copilot и другие агенты
+curl -O https://raw.githubusercontent.com/Kholomyanskiy/anss-standard/master/templates/AGENTS.md
+```
+
+Откройте скачанный файл и укажите в строке `Spec:` путь к своей ANSS-спецификации.
+
+**Навык для Claude Code** (написать, конвертировать и проверить ANSS-спецификацию): скопируйте папку `skills/anss/` в `~/.claude/skills/anss/` (для всех проектов) или в `.claude/skills/anss/` (для одного проекта).
+
 **Автор:** Артём Холомянский — консультант по внедрению ИИ, EVAI Consulting
 **Контакт:** [kholomyanskiy.com](https://kholomyanskiy.com) | artem@kholomyanskiy.com | [Telegram](https://t.me/kholomyanskiy) | [LinkedIn](https://linkedin.com/in/kholomyanskiy) | [GitHub](https://github.com/Kholomyanskiy)
 
@@ -128,7 +143,7 @@ AP-004: Human Override всегда   AP-009: YAGNI
 AP-005: Без vendor lock-in      AP-010: Обратимость важнее эффективности
 ```
 
-Правила принятия решений, а не ценности. Применяются когда требования оставляют пробел.
+Правила принятия решений, а не ценности. Применяются, когда требования оставляют пробел. Если принципы конфликтуют, агент останавливается и спрашивает.
 
 ### Agent Review — аудит спецификации до первой строки кода
 
@@ -267,6 +282,8 @@ AP-005: Без vendor lock-in      AP-010: Обратимость важнее �
 | `ANSS-Core-Template.en.md` | Шаблон на английском |
 | `examples/` | Реальные заполненные примеры |
 | `AGENTS.md` | Инструкции для AI-агентов сканирующих репозиторий |
+| `templates/` | Пресеты для агентов: `CLAUDE.md`, `.cursorrules`, `AGENTS.md` — скопировать один в корень проекта |
+| `skills/anss/` | Навык для Claude Code: написать, конвертировать и проверить ANSS-спецификацию |
 | `llms.txt` | Индекс для LLM-поиска |
 
 ---

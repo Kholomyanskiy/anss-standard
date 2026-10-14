@@ -2,6 +2,16 @@
 
 All notable changes to ANSS Standard will be documented in this file.
 
+## [Unreleased] — 2026-10-15
+
+### Added
+- Added: agent presets (templates/) and Claude Code skill (skills/anss/). Standard text unchanged.
+
+### Changed
+- README: architectural principles line aligned with Standard §2.6 — applied when
+  requirements leave a gap; if principles conflict, the agent stops and asks
+  (previously "applied in order")
+
 ## [1.4] — 2026-07-13
 
 ### Changed
