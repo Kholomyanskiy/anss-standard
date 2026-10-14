@@ -50,4 +50,4 @@ EU AI Act, GDPR, OWASP, C4 Model, Shape Up, ADR, SDD methodology
 ## License
 
 CC BY 4.0 — free for any use including commercial, attribution required
-Contact: kholomyanskiy@gmail.com
+Contact: artem@kholomyanskiy.com

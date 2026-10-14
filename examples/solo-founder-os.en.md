@@ -181,7 +181,7 @@ In code: format `task_{Date.now()}_{random5chars}`
 ## 2.2 Users
 
 **Role: Solo Founder (single user)**
-- Who it is: Artem Kholomyanskiy, AI automation specialist and consultant
+- Who it is: Artem Kholomyanskiy, AI Implementation Consultant
 - What they do in the system: assign tasks to agents, manage projects, read responses, work with plans
 - What they value: fast startup, zero configuration, personal configuration
 - Expected count: 1

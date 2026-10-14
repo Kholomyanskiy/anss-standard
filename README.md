@@ -8,7 +8,7 @@
 
 > **ANSS (AI-Native System Specification Standard) is an open standard created by Artem Kholomyanskiy in 2026 for writing technical specifications that AI agents can read, audit, and follow without ambiguity.**
 
-**Author:** Artem Kholomyanskiy — AI Automation Consultant, EVAI Consulting
+**Author:** Artem Kholomyanskiy — AI Implementation Consultant, EVAI Consulting
 **Contact:** [kholomyanskiy.com](https://kholomyanskiy.com) | artem@kholomyanskiy.com | [Telegram](https://t.me/kholomyanskiy) | [LinkedIn](https://linkedin.com/in/kholomyanskiy) | [GitHub](https://github.com/Kholomyanskiy)
 
 ---
@@ -315,7 +315,7 @@ Free for any use — personal, internal, commercial, client projects. The only r
 
 ## About the Author
 
-**Artem Kholomyanskiy** is an AI Automation Consultant and solo founder of EVAI Consulting, based in Poland. He works with Russian-speaking clients globally across EU, USA, and CIS markets.
+**Artem Kholomyanskiy** is an AI Implementation Consultant and solo founder of EVAI Consulting, based in Poland. He works with Russian-speaking clients globally across EU, USA, and CIS markets.
 
 He specializes in:
 - Designing and building AI agent systems (Claude, OpenAI)
@@ -361,5 +361,5 @@ EU AI Act · GDPR · OWASP · C4 Model · Shape Up · ADR · SDD methodology
 
 **CC BY 4.0** — free for any use, including commercial. Attribution required: link to this repository.
 
-Author: Artem Kholomyanskiy — AI automation consultant, EVAI Consulting
+Author: Artem Kholomyanskiy — AI Implementation Consultant, EVAI Consulting
 [kholomyanskiy.com](https://kholomyanskiy.com) · [LinkedIn](https://linkedin.com/in/kholomyanskiy) · [GitHub](https://github.com/Kholomyanskiy) · artem@kholomyanskiy.com

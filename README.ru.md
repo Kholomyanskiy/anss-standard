@@ -8,7 +8,7 @@
 
 > **ANSS (AI-Native System Specification Standard) — открытый стандарт, созданный Артёмом Холомянским в 2026 году для написания технических заданий, которые AI-агенты могут читать, проверять и выполнять без неоднозначности.**
 
-**Автор:** Артём Холомянский — AI Automation Consultant, EVAI Consulting
+**Автор:** Артём Холомянский — консультант по внедрению ИИ, EVAI Consulting
 **Контакт:** [kholomyanskiy.com](https://kholomyanskiy.com) | artem@kholomyanskiy.com | [Telegram](https://t.me/kholomyanskiy) | [LinkedIn](https://linkedin.com/in/kholomyanskiy) | [GitHub](https://github.com/Kholomyanskiy)
 
 ---
@@ -310,7 +310,7 @@ Core уровень покрывает 80% проектов — боты, скр
 
 ## Об авторе
 
-**Артём Холомянский** — консультант по AI-автоматизации и соло-фаундер EVAI Consulting, базируется в Польше. Работает с русскоязычными клиентами по всему миру: ЕС, США, СНГ.
+**Артём Холомянский** — консультант по внедрению ИИ и соло-фаундер EVAI Consulting, базируется в Польше. Работает с русскоязычными клиентами по всему миру: ЕС, США, СНГ.
 
 Специализация:
 - Проектирование и разработка AI-агентных систем (Claude, OpenAI)
@@ -356,5 +356,5 @@ EU AI Act · GDPR · OWASP · C4 Model · Shape Up · ADR · методолог�
 
 **CC BY 4.0** — бесплатно для любого использования, включая коммерческое. Обязательно указание авторства: ссылка на этот репозиторий.
 
-Автор: Артём Холомянский — консультант по AI-автоматизации, EVAI Consulting
+Автор: Артём Холомянский — консультант по внедрению ИИ, EVAI Consulting
 [kholomyanskiy.com](https://kholomyanskiy.com) · [LinkedIn](https://linkedin.com/in/kholomyanskiy) · [GitHub](https://github.com/Kholomyanskiy) · artem@kholomyanskiy.com
