@@ -293,7 +293,7 @@ AP-005: Без vendor lock-in      AP-010: Обратимость важнее �
 | Проект | Тип | Уровень | Что показывает |
 |---|---|---|---|
 | [Solo Founder OS](examples/solo-founder-os.md) | Локальное веб-приложение, Node.js | Core | Инварианты для контроля зависимостей, Agent Review в действии |
-| [LombardPro](examples/lombard-pro.md) | SaaS, сеть ломбардов | Core | Change Specification, инварианты целостности данных |
+| [LombardPro](examples/lombard-pro.md) | SaaS, сеть ломбардов | Core | Change Specification, инварианты целостности данных. Черновик v0.2, открытые вопросы в §14 · [вывод Agent Review](examples/lombard-pro.agent-review.md) |
 
 Оба — реальные проекты, не синтетические демонстрации.
 
@@ -357,7 +357,7 @@ ANSS разработан на основе практического опыт�
 
 Папка [`examples/`](examples/) содержит анонимизированные реальные спецификации в формате ANSS-Core — готовые для изучения и адаптации.
 
-- [ЛомбардПРО](examples/lombard-pro.md) ([EN](examples/lombard-pro.en.md)) — полная ANSS-Core спецификация системы управления сетью ломбардов. Реальный боевой проект, анонимизирован.
+- [ЛомбардПРО](examples/lombard-pro.md) ([EN](examples/lombard-pro.en.md)) — полная ANSS-Core спецификация системы управления сетью ломбардов. Реальный боевой проект, анонимизирован. Черновик v0.2, открытые вопросы в §14. [Вывод Agent Review](examples/lombard-pro.agent-review.md).
 - [Solo Founder OS](examples/solo-founder-os.md) ([EN](examples/solo-founder-os.en.md)) — спецификация локального веб-приложения с командой AI-агентов через Claude Code.
 
 ---

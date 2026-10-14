@@ -298,7 +298,7 @@ Skipping this step is the most common way ANSS fails to help — the spec exists
 | Project | Type | Level | What it shows |
 |---|---|---|---|
 | [Solo Founder OS](examples/solo-founder-os.md) | Local web app, Node.js, AI agents | Core | Invariants for dependency control, Agent Review in action |
-| [LombardPro](examples/lombard-pro.md) | SaaS, multi-branch pawnshop | Core | Change Specification, data integrity invariants |
+| [LombardPro](examples/lombard-pro.md) | SaaS, multi-branch pawnshop | Core | Change Specification, data integrity invariants. Draft v0.2, open questions in §14 · [Agent Review output](examples/lombard-pro.agent-review.md) |
 
 Both are real projects — not toy demonstrations.
 
@@ -362,7 +362,7 @@ ANSS was developed from hands-on experience across multiple production projects 
 
 The [`examples/`](examples/) folder contains anonymized real-world specifications written in ANSS-Core format — ready to study and adapt.
 
-- [LombardPRO](examples/lombard-pro.md) ([EN](examples/lombard-pro.en.md)) — full ANSS-Core spec for a multi-branch pawnshop management system. Anonymized real production project.
+- [LombardPRO](examples/lombard-pro.md) ([EN](examples/lombard-pro.en.md)) — full ANSS-Core spec for a multi-branch pawnshop management system. Anonymized real production project. Draft v0.2, open questions in §14. [Agent Review output](examples/lombard-pro.agent-review.md).
 - [Solo Founder OS](examples/solo-founder-os.md) ([EN](examples/solo-founder-os.en.md)) — spec for a local web app with an AI agent team via Claude Code.
 
 ---
