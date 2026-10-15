@@ -284,7 +284,7 @@ AP-005: Без vendor lock-in      AP-010: Обратимость важнее �
 | `ANSS-Core-Template.en.md` | Шаблон на английском |
 | `examples/` | Реальные заполненные примеры |
 | `AGENTS.md` | Инструкции для AI-агентов сканирующих репозиторий |
-| `templates/` | Пресеты для агентов: `CLAUDE.md`, `.cursorrules`, `AGENTS.md` — скопировать один в корень проекта |
+| `templates/` | Пресеты для агентов: `CLAUDE.md`, `.cursorrules`, `AGENTS.md` — скопировать один в корень проекта; `anss.mdc` — в `.cursor/rules/` |
 | `skills/anss/` | Навык для Claude Code: написать, конвертировать и проверить ANSS-спецификацию |
 | `llms.txt` | Индекс для LLM-поиска |
 

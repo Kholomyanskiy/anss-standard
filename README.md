@@ -289,7 +289,7 @@ Skipping this step is the most common way ANSS fails to help — the spec exists
 | `ANSS-Core-Template.ru.md` | Template in Russian |
 | `examples/` | Real filled examples |
 | `AGENTS.md` | Instructions for AI agents scanning this repo |
-| `templates/` | Agent presets: `CLAUDE.md`, `.cursorrules`, `AGENTS.md` — copy one to your project root |
+| `templates/` | Agent presets: `CLAUDE.md`, `.cursorrules`, `AGENTS.md` — copy one to your project root; `anss.mdc` — to `.cursor/rules/` |
 | `skills/anss/` | Claude Code skill: write, convert, and review ANSS specs |
 | `llms.txt` | Discovery index for LLM-based search |
 
