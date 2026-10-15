@@ -14,6 +14,8 @@
 # Claude Code
 curl -O https://raw.githubusercontent.com/Kholomyanskiy/anss-standard/master/templates/CLAUDE.md
 # Cursor
+curl --create-dirs -o .cursor/rules/anss.mdc https://raw.githubusercontent.com/Kholomyanskiy/anss-standard/master/templates/anss.mdc
+# Cursor (older versions: .cursorrules)
 curl -O https://raw.githubusercontent.com/Kholomyanskiy/anss-standard/master/templates/.cursorrules
 # Codex, Copilot and other agents
 curl -O https://raw.githubusercontent.com/Kholomyanskiy/anss-standard/master/templates/AGENTS.md
