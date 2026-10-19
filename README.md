@@ -25,7 +25,7 @@ Open the downloaded file and set `Spec:` to the path of your ANSS spec.
 
 **Claude Code skill** (write, convert, and review ANSS specs): copy the `skills/anss/` folder to `~/.claude/skills/anss/` (all projects) or `.claude/skills/anss/` (one project).
 
-**Claude (claude.ai) skill:** download `anss-skill.zip` from the [v1.4 release](https://github.com/Kholomyanskiy/anss-standard/releases/tag/v1.4) and upload it at claude.ai/customize/skills (+ → Create skill → Upload a skill).
+**Claude (claude.ai) skill:** download `anss-skill.zip` from the [v1.4 release](https://github.com/Kholomyanskiy/anss-standard/releases/tag/v1.4) and upload it at [claude.ai/customize/skills](https://claude.ai/customize/skills) (+ → Create skill → Upload a skill).
 
 **Author:** Artem Kholomyanskiy — AI Implementation Consultant, EVAI Consulting
 **Contact:** [kholomyanskiy.com](https://kholomyanskiy.com) | artem@kholomyanskiy.com | [Telegram](https://t.me/kholomyanskiy) | [LinkedIn](https://linkedin.com/in/kholomyanskiy) | [GitHub](https://github.com/Kholomyanskiy)
