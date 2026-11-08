@@ -665,7 +665,7 @@ Response 422: { "error": "PRICE_OUT_OF_RANGE", "min": X, "max": Y, "given": Z }
 -- Branches
 CREATE TABLE branches (
   id          UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  name        TEXT NOT NULL,           -- 'Domashny', 'Bobrynets', 'Korabeliv'
+  name        TEXT NOT NULL,           -- 'Branch 1', 'Branch 2', 'Branch 3'
   address     TEXT,
   is_active   BOOLEAN DEFAULT true,
   created_at  TIMESTAMP WITH TIME ZONE DEFAULT NOW()

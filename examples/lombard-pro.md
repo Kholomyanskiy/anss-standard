@@ -663,7 +663,7 @@ Response 422: { "error": "PRICE_OUT_OF_RANGE", "min": X, "max": Y, "given": Z }
 -- Отделения
 CREATE TABLE branches (
   id          UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  name        TEXT NOT NULL,           -- «Домашній», «Бобринець», «Корабелів»
+  name        TEXT NOT NULL,           -- «Отделение 1», «Отделение 2», «Отделение 3»
   address     TEXT,
   is_active   BOOLEAN DEFAULT true,
   created_at  TIMESTAMP WITH TIME ZONE DEFAULT NOW()
